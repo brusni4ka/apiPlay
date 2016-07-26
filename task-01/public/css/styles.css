@@ -1,0 +1,306 @@
+@import url('http://fonts.googleapis.com/css?family=Open+Sans:400,600,700');
+@import url('http://netdna.bootstrapcdn.com/font-awesome/4.1.0/css/font-awesome.css');
+
+body {
+    background: #e7ecea;
+    color: #555;
+    font: 14px/1 'Open Sans', sans-serif;
+    line-height: 2.5em;
+
+}
+
+
+/*BUTTON*/
+button {
+    margin: 10px;
+    padding: 10px;
+    border: none;
+    border-radius: 5px;
+    color: #fff;
+    font-size: 16px;
+    font-weight: bold;
+    background-color: #b67ddd;
+}
+
+button:hover {
+    background-color: #8A2BE2;
+    cursor: pointer;
+}
+
+button:disabled {
+    background-color: #e7ecea;
+    cursor: wait;
+}
+
+/*INPUTS*/
+.form-block {
+    margin: 20px 0;
+    float: left;
+    text-align: left;
+}
+
+.field {
+    display: inline-block;
+    clear: both;
+    text-align: right;
+    line-height: 25px;
+}
+
+label {
+    float: left;
+    padding-right: 10px;
+}
+
+input {
+    min-width: 100px;
+    color: #555;
+    padding: 5px;
+    margin: 0 10px;
+    font-size: 16px;
+}
+
+/*CONTENT*/
+.content {
+    width: 80%;
+    background-color: #fff;
+}
+
+/* Style the tab content */
+.content-block {
+    min-height: 400px;
+    position: relative;
+    padding: 1.5em 3.5em;
+    background: #fff;
+    font-size: 1.3em;
+    text-align: center;
+
+}
+
+.text-wrapper {
+    margin-top: 50px;
+}
+
+
+/*TABS */
+.tabs {
+
+    position: relative;
+    overflow: hidden;
+    margin: 0;
+    width: 100%;
+    font-weight: 300;
+    font-size: 1.25em;
+    text-align: center;
+    display: block;
+}
+
+nav ul.tabs {
+    position: relative;
+    padding: 0;
+    max-width: 80%;
+    list-style: none;
+    display: -ms-flexbox;
+    display: -webkit-flex;
+    display: -moz-flex;
+    display: -ms-flex;
+    display: flex;
+    flex-direction: row;
+    -webkit-flex-flow: row wrap;
+    -moz-flex-flow: row wrap;
+    -ms-flex-flow: row wrap;
+    flex-flow: row wrap;
+    -webkit-justify-content: center;
+    -moz-justify-content: center;
+    -ms-justify-content: center;
+    justify-content: center;
+}
+
+nav ul.tabs li {
+
+    z-index: 1;
+    -webkit-flex: 1;
+    -moz-flex: 1;
+    -ms-flex: 1;
+    flex: 1;
+}
+
+nav ul.tabs a {
+    position: relative;
+    display: block;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    line-height: 2.5;
+    text-decoration: none;
+}
+
+nav .tabs li.active a {
+    color: #74777b;
+}
+
+.tabs a:focus {
+    outline: none;
+}
+
+/*Special tab style*/
+/*****************************/
+/* Flip */
+/*****************************/
+
+.tabs-style-flip {
+    max-width: 1200px;
+}
+
+.tabs-style-flip li a {
+    padding: 0.5em 0;
+    color: #2CC185;
+    -webkit-transition: color 0.3s;
+    -moz-transition: color 0.3s;
+    transition: color 0.3s;
+}
+
+.tabs-style-flip li a:hover,
+.tabs-style-flip li a:focus,
+.tabs-style-flip li.active a {
+    color: #74777b;
+}
+
+.tabs-style-flip li a span {
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    font-weight: 700;
+    font-size: 0.625em;
+}
+
+.tabs-style-flip li a::after {
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: -1;
+    width: 100%;
+    height: 100%;
+    background-color: #f0f0f0;
+    content: '';
+    -webkit-transition: -webkit-transform 0.3s, background-color 0.3s;
+    -moz-transition: -moz-transform 0.3s, background-color 0.3s;
+    transition: transform 0.3s, background-color 0.3s;
+    -webkit-transform: perspective(900px) rotate3d(1, 0, 0, 90deg);
+    -moz-transform: perspective(900px) rotate3d(1, 0, 0, 90deg);
+    transform: perspective(900px) rotate3d(1, 0, 0, 90deg);
+    -webkit-transform-origin: 50% 100%;
+    -moz-transform-origin: 50% 100%;
+    transform-origin: 50% 100%;
+    -webkit-perspective-origin: 50% 100%;
+    -moz-perspective-origin: 50% 100%;
+    perspective-origin: 50% 100%;
+}
+
+.tabs-style-flip li.active a::after {
+    background-color: #fff;
+    -webkit-transform: perspective(900px) rotate3d(1, 0, 0, 0deg);
+    -moz-transform: perspective(900px) rotate3d(1, 0, 0, 0deg);
+    transform: perspective(900px) rotate3d(1, 0, 0, 0deg);
+}
+
+
+
+/*TABLE*/
+
+table {
+    margin: 20px 0;
+    width: 100%;
+    table-layout: fixed;
+}
+
+th {
+    background-color: #2CC185;
+    color: white;
+    font-weight: bold;
+}
+
+/*not supported in IE*/
+tr:nth-child(even) {
+    background-color: #F4E4FF
+}
+
+th, td {
+    border: none;
+    padding: 25px;
+    text-align: center;
+}
+
+.loader {
+    position: fixed;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 9999;
+    background: url('waiting.gif') 50% 50% no-repeat rgb(249, 249, 249);
+}
+
+/*FULL SCREEN*/
+
+.full-screen-icon {
+    position: absolute;
+    top: 0;
+    right: 0;
+    background: url("fs-start.png") no-repeat;
+    width: 75px;
+    height: 75px;
+    display: none;
+}
+
+.full-screen-icon:hover {
+    cursor: pointer;
+}
+
+.fs-cover:-webkit-full-screen {  width: 100%;  height: 100%;  padding: 0;  }
+.fs-cover:-moz-full-screen {  width: 100%;  height: 100%;  padding: 0;  }
+.fs-cover:-ms-fullscreen {  width: 100%;  height: 100%;  padding: 0;  }
+.fs-cover:fullscreen {  width: 100%;  height: 100%;  padding: 0;  }
+
+:-webkit-full-screen table#worker {
+    display: table-caption;
+    height: 500px;
+    overflow-y: scroll
+}
+
+:-moz-full-screen table#worker {
+    display: table-caption;
+    height: 500px;
+    overflow-y: scroll;
+}
+
+:-ms-fullscreen table#worker {
+    display: table-caption;
+    height: 500px;
+    overflow-y: scroll;
+}
+
+:fullscreen table#worker {
+    display: table-caption;
+    height: 500px;
+    overflow-y: scroll;
+}
+
+:-webkit-full-screen .full-screen-icon { background: url("fs-close.png") no-repeat; }
+:-moz-full-screen .full-screen-icon { background: url("fs-close.png") no-repeat;  }
+:-ms-fullscreen .full-screen-icon {  background: url("fs-close.png") no-repeat;  }
+:fullscreen .full-screen-icon {  background: url("fs-close.png") no-repeat; }
+
+:-webkit-full-screen .form-block {  max-width: 400px;  display: block;  margin: 20px 30px;  }
+:-moz-full-screen .form-block {  max-width: 400px;  display: block;  margin: 20px 30px;  }
+:-ms-fullscreen .form-block {  max-width: 400px;  display: block;  margin: 20px 30px;  }
+:fullscreen .form-block {  max-width: 400px;  display: block;  margin: 20px 30px;  }
+
+:-webkit-full-screen div.field {  margin: 10px 0;  display: block  }
+:-moz-full-screen div.field {  margin: 10px 0;  display: block  }
+:-ms-fullscreen div.field {  margin: 10px 0;  display: block  }
+:fullscreen div.field {  margin: 10px 0;  display: block  }
+
+:-webkit-full-screen #map img {  width: 100%;  height: 100%  }
+:-moz-full-screen #map img {  width: 100%;  height: 100%  }
+:-ms-fullscreen #map img {  width: 100%;  height: 100%  }
+:fullscreen #map img {  width: 100%;  height: 100%  }
+

@@ -1,0 +1,46 @@
+/*!*TABS *!*/
+.tabs {
+
+    position: relative;
+    overflow: hidden;
+    margin: 0;
+    width: 100%;
+    font-weight: 300;
+    font-size: 1.25em;
+    display: block;
+}
+
+nav ul.tabs li {
+    width: 19%;
+    position: relative;
+    display: inline-block;
+}
+
+nav ul.tabs a {
+    text-align: center;
+    padding: 0.5em 3.5em;
+    color: #2CC185;
+    position: relative;
+    display: block;
+    line-height: 2.5;
+    text-decoration: none;
+}
+
+nav .tabs li.active a {
+    color: #74777b;
+}
+
+nav .tabs li.active{
+    background-color: #fff;
+}
+
+.tabs a:focus {
+    outline: none;
+}
+
+.tabs-style-flip li a:hover,
+.tabs-style-flip li a:focus,
+.tabs-style-flip li.active a {
+    color: #74777b;
+
+}

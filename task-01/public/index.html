@@ -1,0 +1,101 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>JS API Part 2</title>
+    <link rel="stylesheet" href="css/reset.css">
+    <link rel="stylesheet" href="css/styles.css"/>
+    <!--[if IE 11]>
+    <link rel="stylesheet" type="text/css" href="css/ie11tabs.css" />
+    <![endif]-->
+    <script src="js/jquery-1.11.2.min.js"></script>
+</head>
+<body>
+<nav>
+    <ul class="tabs tabs-style-flip">
+        <li data-tab="default" class="active"><a href="/">Default</a></li>
+        <li data-tab="geolocation"><a href="/geolocation">Geolocation</a></li>
+        <li data-tab="synccalculation"><a href="/synccalculation">Sync calculation</a></li>
+        <li data-tab="webworker"><a href="/webworker">WebWorker</a></li>
+    </ul>
+</nav>
+<section class="content">
+    <div class="fs-cover">
+        <div class="content-block" data-content="default">
+            <span class="full-screen-icon"></span>
+            <div class="text-wrapper">
+                <p>This is default tab visible to user. Also all unresolved urls should point here.</p>
+            </div>
+        </div>
+    </div>
+
+    <div class="fs-cover">
+        <div class="content-block" data-content="geolocation">
+            <span class="full-screen-icon"></span>
+            <div id="map">
+                <img class="wait" src="css/waiting.gif "  alt="Map">
+            </div>
+        </div>
+    </div>
+
+    <div class="fs-cover">
+        <div class="content-block" data-content="synccalculation">
+            <span class="full-screen-icon"></span>
+            <div class="text-wrapper">
+                <p>Example of long calculations that blocks page. This is example page.</p>
+
+                <p>Click on button and try to navigate to other tabs on the page or activate fullscreen.</p>
+                <button id="syncstart">Start sync calculation</button>
+                <p>Calculations result: <span id="syncresult">N/A</span></p>
+            </div>
+        </div>
+    </div>
+
+    <div class="fs-cover">
+        <div class="content-block" data-content="webworker">
+            <span class="full-screen-icon"></span>
+            <div class="text-wrapper">
+                <p>This page should be updated normally</p>
+            </div>
+
+            <div class="form-block">
+                <div class="field">
+                    <label for="iteration">Iteration</label>
+                    <input id="iteration" type="text" value="100000000">
+                </div>
+                <div class="field">
+                    <label for="results">Results every</label>
+                    <input id="results" type="text" value="100000000">
+                </div>
+                <button id="start" type="submit">Start acync calculation</button>
+            </div>
+
+
+            <table id="worker">
+                <thead>
+                <tr>
+                    <th>Iteration</th>
+                    <th>Computed</th>
+                    <th>Delta</th>
+                </tr>
+                </thead>
+                <tbody>
+                <tr>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                </tr>
+                </tbody>
+            </table>
+        </div>
+    </div>
+
+</section>
+
+<script src="js/WebWorker.js"></script>
+<script src="js/Geo.js"></script>
+<script src="js/script.js"></script>
+<script src="js/tabs.js"></script>
+<script src="js/fullScreen.js"></script>
+</body>
+</html>
